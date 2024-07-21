@@ -1,0 +1,30 @@
+<!--Store this code in 'register.html' file inside the 'templates' folder-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Register Your Review </title>
+		<link rel="stylesheet" href="../static/style.css"> 
+	</head>
+	<body>
+		<div class="registercontent" align="center">
+			<div class="registertop">
+				<h1>SM Restaurant</h1>
+			</div></br></br>
+			<div class="registerbottom">
+			<form action="{{ url_for('register')}}" method="post" autocomplete="off">
+			<div class="msg">{{ msg }}</div>
+			<input type="text" name="username" placeholder="Username" class="textbox" id="username" required></br></br>
+			<input type="password" name="password" placeholder="Password" class="textbox" id="password" required></br></br>
+			<input type="email" name="email" placeholder="Email ID" class="textbox" id="email" required></br></br>
+			<input type="text" name="cuisine" placeholder="Favourite Cuisine" class="textbox" id="cuisine" required></br></br>
+			<input type="text" name="ambience" placeholder="Ambience Rating (/5)" class="textbox" id="ambience" required></br></br>
+			<input type="text" name="cleanliness" placeholder="Cleanliness Rating (/5)" class="textbox" id="cleanliness" required></br></br>
+			<input type="text" name="food" placeholder="Food Quality Rating (/5)" class="textbox" id="food" required></br></br>
+			<input type="text" name="remarks" placeholder="Other Remarks" class="textbox" id="remarks" required></br></br>
+			<input type="submit" class="btn" value="Register">
+			</form>
+			<p class="worddark">Already given a review? <a class="worddark" href="{{ url_for('login')}}">Login here</a></p>
+			</div>
+		</div>
+	</body>
+</html>

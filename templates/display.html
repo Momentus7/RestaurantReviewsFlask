@@ -1,0 +1,68 @@
+<!--Store this code in 'display.html' file inside the 'templates' folder-->
+
+<html lang="en">
+	<head>
+		<title>display</title>
+		<link rel="stylesheet" href="../static/style.css">
+	</head>
+	<body bgcolor="white">
+		<div class="one">
+			<div class="two">
+				<h1></h1>
+				<ul>
+					<li><a href="{{url_for('index')}}">Index</a></li>
+					<li class="active"><a href="{{url_for('display')}}">Your Review</a></li>
+					<li><a href="{{url_for('update')}}">Update Review</a></li>
+					<li><a href="{{url_for('logout')}}">Log out</a></li>
+				</ul>
+			</div>
+			<div class="content" align="center">
+				<div class="topbar">
+					<h2>Welcome!! Your Review!! </h2>				 
+				</div> </br>
+				<div class="contentbar">
+					<h1>Your Review</h1> </br>
+					{% block content %}
+						<div class="border">
+							<table class="worddark"></br></br></br></br>
+								<tr>
+									<td>Name:</td>
+									<td>{{ account['username'] }}</td>
+								</tr>
+								<tr>
+									<td>Password:</td>
+									<td>{{ account['password'] }}</td>
+								</tr>
+								<tr>
+									<td>Email ID:</td>
+									<td>{{ account['email'] }}</td>
+								</tr>
+								<tr>
+									<td>Favourite Cuisine:</td>
+									<td>{{ account['cuisine'] }}</td>
+								</tr>		
+								<tr>
+									<td>Ambience Rating(/5):</td>
+									<td>{{ account['ambience'] }}</td>
+								</tr>
+								<tr>
+									<td>Cleanliness Rating(/5):</td>
+									<td>{{ account['cleanliness'] }}</td>
+								</tr>
+								<tr>
+									<td>Food Quality(/5):</td>
+									<td>{{ account['food'] }}</td>
+								</tr>
+								<tr>
+									<td>Other Remarks:</td>
+									<td>{{ account['remarks'] }}</td>
+								</tr>		 
+							</table>
+						</div>
+					{% endblock %}									 
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

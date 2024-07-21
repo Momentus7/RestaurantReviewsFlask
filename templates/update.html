@@ -1,0 +1,41 @@
+<!--Store this code in 'update.html' file inside the 'templates' folder-->
+<html lang="en">
+	<head>
+		<title>Update Your Review</title>
+		<link rel="stylesheet" href="../static/style.css">
+	</head>
+	<body bgcolor="white">
+		<div class="one">
+			<div class="two">
+				<h1></h1>
+				<ul>
+					<li><a href="{{url_for('index')}}">Index</a></li>
+					<li><a href="{{url_for('display')}}">View Your Review</a></li>
+					<li class="active"><a href="{{url_for('update')}}">Update Your Review</a></li>
+					<li><a href="{{url_for('logout')}}">Log out</a></li>
+				</ul>
+			</div>
+			<div class="content" align="center">
+				<div class="topbar">
+					<h2>Welcome!! You can update your review here !</h2>				 
+				</div></br></br>
+				<div class="contentbar">
+				<h1>Fill details to update your review</h1></br>
+			<form action="{{ url_for('update') }}" method="post" autocomplete="off">
+					<div class="msg">{{ msg }}</div>
+					<input type="text" name="username" placeholder="Enter Your Username" class="textbox" id="username" required></br></br>
+					<input type="password" name="password" placeholder="Enter Your Password" class="textbox" id="password" required></br></br>
+					<input type="email" name="email" placeholder="Enter Your Email ID" class="textbox" id="email" required></br></br>
+					<input type="text" name="cuisine" placeholder="Enter your Favourite Cuisine" class="textbox" id="cuisine" required></br></br>
+					<input type="text" name="ambience" placeholder="Enter rating for ambience" class="textbox" id="ambience" required></br></br>
+					<input type="text" name="cleanliness" placeholder="Enter rating for cleanliness" class="textbox" id="cleanliness" required></br></br>
+					<input type="text" name="food" placeholder="Enter rating for food quality" class="textbox" id="food" required></br></br>
+					<input type="text" name="remarks" placeholder="Other Remarks" class="textbox" id="remarks" required></br></br>
+					<input type="submit" class="btn" value="Update">
+			</form>				 
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

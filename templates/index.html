@@ -1,0 +1,30 @@
+<!--Store this code in 'index.html' file inside the 'templates' folder-->
+<html lang="en">
+	<head>
+		<title>index</title>
+		<link rel="stylesheet" href="../static/style.css">
+	</head>
+
+	<body bgcolor="white">
+		<div class="one">
+			<div class="two">
+				<h1></h1>
+				<ul>
+					<li class="active"><a href="{{url_for('index')}}">Index</a></li>
+					<li><a href="{{url_for('display')}}">Your Review</a></li>
+					<li><a href="{{url_for('update')}}">Update Review</a></li>
+					<li><a href="{{url_for('logout')}}">Log out</a></li>
+				</ul>
+			</div>
+			<div class="content" align="center">
+				<div class="topbar">
+					<h2>Thank you for your review!! </h2>				 
+				</div></br></br>
+				<div class="contentbar">
+					<div class="msg">Review successfully saved</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
